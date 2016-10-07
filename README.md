@@ -7,7 +7,7 @@
 #### Author: Brainfuck
 #### Tested on Kali Linu8x Xfce
 
-![alt text](http://i.hizliresim.com/B8WJaM.png)
+![alt text](http://i.hizliresim.com/dXJno4.png)
 
 
 
