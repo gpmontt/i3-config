@@ -2,15 +2,11 @@
 # #########     
 #                            
 # i3 version: 4.12 
-# Config version: 3.9               
+# Config version: 3.10-dev               
 # Dependencies: scrot, feh                                  
 # Author: Brainfuck 
 # https://github.com/BrainfuckSec/i3-config
 # Tested on: Kali Linux Xfce 
-
-
-# font for window titles. ISO 10646 = Unicode
-font xft:Terminus 9
 
 
 # Colors
@@ -26,6 +22,9 @@ client.urgent           #2F343A #900000 #FFFFFF #900000
 # Windows style
 ###############
 
+# font for window titles. ISO 10646 = Unicode
+font xft:Terminus 9
+
 new_window pixel 1
 
 # Back and forth workplace switching
@@ -33,6 +32,32 @@ workspace_auto_back_and_forth yes
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym 113 resize shrink width 10 px or 10 ppt
+        bindsym 116 resize grow height 10 px or 10 ppt
+        bindsym 111 resize shrink height 10 px or 10 ppt
+        bindsym 114 resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+z mode "resize"
 
 
 # Keybindings
@@ -100,30 +125,6 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-# move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+at move container to workspace 2
-bindsym $mod+Shift+equal move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
-bindsym $mod+Shift+percent move container to workspace 5
-bindsym $mod+Shift+asciicircum move container to workspace 6
-bindsym $mod+Shift+ampersand move container to workspace 7
-bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9
-bindsym $mod+Shift+parenright move container to workspace 10
-
 # reload the configuration file
 bindsym $mod+Shift+C reload
 
@@ -132,6 +133,59 @@ bindsym $mod+Shift+R restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+# Workspaces
+############
+
+# customize workspace name
+set $WS1   1:terminals
+set $WS2   2:web
+set $WS3   3:programming
+set $WS4   4:note
+set $WS5   5:music
+set $WS6   6:virtualbox
+set $WS7   7:
+set $WS8   8:
+set $WS9   9:
+set $WS0   10:
+
+# switch to workspace
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS0
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+6 move container to workspace $WS6
+bindsym $mod+Shift+7 move container to workspace $WS7
+bindsym $mod+Shift+8 move container to workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9
+bindsym $mod+Shift+0 move container to workspace $WS0
+
+# workspaces assignment
+# force a window on a named workspace
+assign [class="xfce4-terminal"]	$WS1
+assign [class="Firefox"]		$WS2
+assign [class="Hexchat"] 		$WS2
+assign [class="Geany"] 			$WS3
+assign [class="Cherrytree"] 	$WS4
+assign [class="Vlc"] 			$WS5
+assign [class="VirtualBox"] 	$WS6
+
+# enable floating mode for all xfce4-terminal windows
+for_window [class="xfce4-terminal"] floating enable
 
 
 # My Keybindings
@@ -150,50 +204,6 @@ bindsym $mod+t exec --no-startup-id thunar
 bindsym Print exec xfce4-screenshooter 
 # screenlock
 bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
-
-
-# Workspaces
-############
-
-# workspaces assignment
-assign [class="xfce4-terminal"] 1
-assign [class="Firefox"] 2
-assign [class="Hexchat"] 2
-assign [class="Geany"] 3
-assign [class="Cherrytree"] 4
-assign [class="Vlc"] 4
-assign [class="VirtualBox"] 5
-
-
-# enable floating mode for all xfce4-terminal windows
-for_window [class="xfce4-terminal"] floating enable
-
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym 113 resize shrink width 10 px or 10 ppt
-        bindsym 116 resize grow height 10 px or 10 ppt
-        bindsym 111 resize shrink height 10 px or 10 ppt
-        bindsym 114 resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+z mode "resize"
 
 
 # i3bar
