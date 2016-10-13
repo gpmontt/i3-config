@@ -2,21 +2,33 @@
 # #########     
 #                            
 # i3 version: 4.12 
-# Config version: 3.10-dev               
+# Config version: 3.10.2-dev               
 # Dependencies: scrot, feh                                  
 # Author: Brainfuck 
 # https://github.com/BrainfuckSec/i3-config
 # Tested on: Kali Linux Xfce 
 
 
+# set colors
+set $white        #FFFFFF
+set $black        #000000
+set $blue	      #5FB9ED
+set $red          #900000
+set $lightgreen   #339966       
+set $lightgrey    #ABADAC
+set $mediumgrey   #888888
+set $darkgrey     #33393B
+set $darkgrey2    #2F343A
+
+
 # Colors
 ########
 
-# class                 border  backgr. text    indicator
-client.focused          #ABADAC #ABADAC #FFFFFF #000000
-client.focused_inactive #383838 #383838 #888888 #000000
-client.unfocused        #000000 #000000 #888888 #000000
-client.urgent           #2F343A #900000 #FFFFFF #900000
+# class                 border         backgr.     text         indicator
+client.focused          $lightgrey     $lightgrey  $white       $black
+client.focused_inactive $darkgrey      $darkgrey   $mediumgrey  $black
+client.unfocused        $black         $black      $mediumgrey  $black
+client.urgent           $darkgrey2     $red        $white       $red
 
 
 # Windows style
@@ -142,7 +154,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 set $WS1   1:terminals
 set $WS2   2:web
 set $WS3   3:programming
-set $WS4   4:note
+set $WS4   4:note/working
 set $WS5   5:music
 set $WS6   6:virtualbox
 set $WS7   7:
@@ -151,38 +163,38 @@ set $WS9   9:
 set $WS0   10:
 
 # switch to workspace
-bindsym $mod+1 workspace $WS1
-bindsym $mod+2 workspace $WS2
-bindsym $mod+3 workspace $WS3
-bindsym $mod+4 workspace $WS4
-bindsym $mod+5 workspace $WS5
-bindsym $mod+6 workspace $WS6
-bindsym $mod+7 workspace $WS7
-bindsym $mod+8 workspace $WS8
-bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace $WS0
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $WS1
-bindsym $mod+Shift+2 move container to workspace $WS2
-bindsym $mod+Shift+3 move container to workspace $WS3
-bindsym $mod+Shift+4 move container to workspace $WS4
-bindsym $mod+Shift+5 move container to workspace $WS5
-bindsym $mod+Shift+6 move container to workspace $WS6
-bindsym $mod+Shift+7 move container to workspace $WS7
-bindsym $mod+Shift+8 move container to workspace $WS8
-bindsym $mod+Shift+9 move container to workspace $WS9
-bindsym $mod+Shift+0 move container to workspace $WS0
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 # workspaces assignment
 # force a window on a named workspace
-assign [class="xfce4-terminal"]	$WS1
-assign [class="Firefox"]		$WS2
-assign [class="Hexchat"] 		$WS2
-assign [class="Geany"] 			$WS3
-assign [class="Cherrytree"] 	$WS4
-assign [class="Vlc"] 			$WS5
-assign [class="VirtualBox"] 	$WS6
+assign [class="xfce4-terminal"]	$ws1
+assign [class="Firefox"]		$ws2
+assign [class="Hexchat"]        $ws2
+assign [class="Geany"]          $ws3
+assign [class="Cherrytree"]     $ws4
+assign [class="Vlc"]            $ws5
+assign [class="VirtualBox"]     $ws6
 
 # enable floating mode for all xfce4-terminal windows
 for_window [class="xfce4-terminal"] floating enable
@@ -216,11 +228,17 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
         tray_output primary
         font pango: Terminus 9
         workspace_buttons yes
-        separator_symbol "|"
+        separator_symbol "::"
         tray_padding 0
     
         colors {
-            background #33393B
+			# class                 border      backgr.       text     
+			focused_workspace	    $darkgrey	$darkgrey     $lightgrey
+			active_workspace        $lightgreen $lightgreen   $white              
+            inactive_workspace      $black      $black        $lightgrey
+			urgent_workspace        $blue       $blue         $lightgrey            
+
+            background              $darkgrey2
     }
 }
 
@@ -233,3 +251,4 @@ exec --no-startup-id feh --bg-fill ~/Immagini/grey-wall.png
 
 # network-manager applet
 exec --no-startup-id nm-applet
+
