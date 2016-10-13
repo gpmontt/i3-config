@@ -2,12 +2,12 @@
 
 ### Config for i3 - Tiling Window Manager
 
-#### Config Version: 3.10-dev
+#### Config Version: 3.10.2-dev
 #### i3 version: 4.12 
 #### Author: Brainfuck
 #### Tested on: Kali Linux Xfce
 
-![alt text](http://i.hizliresim.com/A3bP6v.png)
+![alt text](http://i.hizliresim.com/D3bdXv.png)
 
 
 
