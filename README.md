@@ -1,6 +1,6 @@
 ## i3 config
 
-### Config for i3 - Tiling Window Manager
+### i3wm config for Debian/Kali Linux
 
 #### Config Version: 3.10.2-dev
 #### i3 version: 4.12 
