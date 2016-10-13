@@ -151,16 +151,16 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ############
 
 # customize workspace name
-set $WS1   1:terminals
-set $WS2   2:web
-set $WS3   3:programming
-set $WS4   4:note/working
-set $WS5   5:music
-set $WS6   6:virtualbox
-set $WS7   7:
-set $WS8   8:
-set $WS9   9:
-set $WS0   10:
+set $ws1   1:terminals
+set $ws2   2:web
+set $ws3   3:programming
+set $ws4   4:note/working
+set $ws5   5:music
+set $ws6   6:virtualbox
+set $ws7   7:
+set $ws8   8:
+set $ws9   9:
+set $ws0   10:
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -189,7 +189,7 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 # workspaces assignment
 # force a window on a named workspace
 assign [class="xfce4-terminal"]	$ws1
-assign [class="Firefox"]		$ws2
+assign [class="Firefox"]	$ws2
 assign [class="Hexchat"]        $ws2
 assign [class="Geany"]          $ws3
 assign [class="Cherrytree"]     $ws4
@@ -233,13 +233,13 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
     
         colors {
 			# class                 border      backgr.       text     
-			focused_workspace	    $darkgrey	$darkgrey     $lightgrey
+			focused_workspace	$darkgrey   $darkgrey     $white
 			active_workspace        $lightgreen $lightgreen   $white              
-            inactive_workspace      $black      $black        $lightgrey
+                        inactive_workspace      $black      $black        $lightgrey
 			urgent_workspace        $blue       $blue         $lightgrey            
 
-            background              $darkgrey2
-    }
+                        background              $darkgrey2
+        }
 }
 
  
