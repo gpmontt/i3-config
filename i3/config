@@ -12,7 +12,7 @@
 # set colors
 set $white        #FFFFFF
 set $black        #000000
-set $blue	      #5FB9ED
+set $blue	  #5FB9ED
 set $red          #900000
 set $lightgreen   #339966       
 set $lightgrey    #ABADAC
