@@ -2,7 +2,7 @@
 
 ### i3wm config for Debian/Kali Linux
 
-#### Config Version: 3.10.2-dev
+#### Config Version: 3.10-dev
 #### i3 version: 4.12 
 #### Author: Brainfuck
 #### Tested on: Kali Linux Xfce
