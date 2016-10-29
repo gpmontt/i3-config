@@ -6,7 +6,7 @@
 #### i3 version: 4.12 
 #### Author: Brainfuck
 
-![alt text](http://i.hizliresim.com/40X5yq.png)
+![alt text](http://i.hizliresim.com/G3aaz3.png)
 
 
 
@@ -36,6 +36,7 @@ $HOME/.config/i3
 $HOME/.config/gtk-3.0
 ```
 
+Resources:
 
 GTK3 Theme --> Adwaita-Xfce: https://github.com/thearakattack/adwaita-xfce
 
