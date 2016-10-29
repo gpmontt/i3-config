@@ -6,7 +6,7 @@
 #### i3 version: 4.12 
 #### Author: Brainfuck
 
-![alt text](http://i.hizliresim.com/G3aaz3.png)
+![alt text](http://i.hizliresim.com/lEma2g.png)
 
 
 
