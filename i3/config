@@ -13,7 +13,7 @@
 ########
 
 # class                  border  backgr  text     indicator child_border 
-client.focused		     #1d3037 #1d3037 #eaeaea  #eaeaea   #1d3037
+client.focused		 #1d3037 #1d3037 #eaeaea  #eaeaea   #1d3037
 client.focused_inactive  #1d2121 #1d2121 #a1a1a1  #484e50   #1d2121
 client.unfocused         #272727 #272727 #fdfdfd  #bfbfbf   #272727	
 client.urgent            #4a4b4c #4a4b4c #fdfdfd  #fbfbfb   #4a4c4b
@@ -178,16 +178,16 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 
 # workspaces assignment
 # force a window on a named workspace
-assign [class="termite"]	    $ws1
-assign [class="Firefox"]	    $ws2
+assign [class="termite"]	$ws1
+assign [class="Firefox"]	$ws2
 assign [class="Hexchat"]        $ws2
 assign [class="Cherrytree"]     $ws4
 assign [class="Thunar"]         $ws4
 assign [class="Vlc"]            $ws5
 assign [class="VirtualBox"]     $ws6
 
-# enable floating mode for all xfce4-terminal windows
-for_window [class="xfce4-terminal"] floating enable border pixel 1
+# enable floating mode for all terminal windows
+for_window [class="termite"] floating enable border pixel 1
 
 
 # My Keybindings
@@ -225,7 +225,7 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
 			background #33393B
 			statusline #eaeaea
 			separator  #081419
-			#	               border backgr. text
+			#	           border backgr. text
 			focused_workspace  #08202a #08202a #e7dfd9
 			inactive_workspace #253941 #253941 #9e958e
 			urgent_workspace   #1b1d1f #669999 #000000
@@ -241,4 +241,3 @@ exec --no-startup-id feh --bg-fill ~/Immagini/grey-background.png
 
 # network-manager applet
 exec --no-startup-id nm-applet
-
