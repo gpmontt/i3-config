@@ -1,13 +1,12 @@
 ## i3 config
 
-### i3wm config for Debian/Kali Linux
+### i3wm configuration for Kali Linux Xfce 
 
 #### Config Version: 3.10-dev
 #### i3 version: 4.12 
 #### Author: Brainfuck
-#### Tested on: Kali Linux Xfce
 
-![alt text](https://d2.dropfile.to/img/e0979f73545c8678f5407d8bbf0a4ffd.png)
+![alt text](http://i.hizliresim.com/40X5yq.png)
 
 
 
@@ -40,6 +39,9 @@ $HOME/.config/gtk-3.0
 
 GTK3 Theme --> Adwaita-Xfce: https://github.com/thearakattack/adwaita-xfce
 
-Icons Theme --> Paper: https://github.com/snwh/paper-icon-theme
+Icons Theme --> Flat Remix: https://github.com/daniruiz/Flat-Remix
 
-Terminal Fonts --> Terminus 12 (see bashrc)
+Terminal --> Termite: https://github.com/thestinger/termite
+
+Wallpaper --> http://agoner.deviantart.com/art/Mur-Enduit-180762771
+
