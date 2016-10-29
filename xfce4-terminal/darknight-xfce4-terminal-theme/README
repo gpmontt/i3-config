@@ -1,8 +1,0 @@
-# darknight colorscheme by Brainfuck 
-#
-# xfce4-terminal colorscheme 
-#
-
-Copy darknight.theme to /usr/share/xfce4/terminal/colorschemes
-
-Restart xfce4-terminal 
