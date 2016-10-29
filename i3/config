@@ -237,7 +237,7 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
 ########################
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/Immagini/grey-background.png
+exec --no-startup-id feh --bg-fill ~/Immagini/mur_enduit.png
 
 # network-manager applet
 exec --no-startup-id nm-applet
