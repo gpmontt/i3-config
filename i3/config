@@ -13,7 +13,7 @@
 ########
 
 # class                  border  backgr  text     indicator child_border 
-client.focused		     #8c8c8c #8c8c8c #eaeaea  #eaeaea   #8c8c8c
+client.focused		 #8c8c8c #8c8c8c #eaeaea  #eaeaea   #8c8c8c
 client.focused_inactive  #1d2121 #1d2121 #a1a1a1  #484e50   #1d2121
 client.unfocused         #272727 #272727 #fdfdfd  #bfbfbf   #272727	
 client.urgent            #4a4b4c #4a4b4c #fdfdfd  #fbfbfb   #4a4c4b
@@ -179,7 +179,7 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 # workspaces assignment
 # force a window on a named workspace
 assign [class="xfce4-terminal"]	$ws1
-assign [class="Firefox"]	    $ws2
+assign [class="Firefox"]	$ws2
 assign [class="Hexchat"]        $ws2
 assign [class="Cherrytree"]     $ws4
 assign [class="Thunar"]         $ws4
@@ -225,7 +225,7 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
 			background #33393B
 			statusline #eaeaea
 			separator  #081419
-			#	               border backgr. text
+			#	           border  backgr  text
 			focused_workspace  #336699 #336699 #eaeaea
 			inactive_workspace #1a344c #1a344c #bfbfbf
 			urgent_workspace   #1b1d1f #669999 #000000
@@ -241,5 +241,3 @@ exec --no-startup-id feh --bg-fill ~/Immagini/mur_enduit.png
 
 # network-manager applet
 exec --no-startup-id nm-applet
-
-
