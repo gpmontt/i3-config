@@ -39,7 +39,7 @@ $HOME/.config/gtk-3.0
 
 Resources:
 
-GTK3 Theme --> Adwaita-Xfce Dark: https://github.com/thearakattack/adwaita-xfce
+GTK3 Theme --> Arc-Grey-Dark: https://github.com/eti0/arc-grey-theme
 
 Icons Theme --> Faenza-Grey: http://riverraiden.deviantart.com/art/Faenza-Grey-264713552
 
