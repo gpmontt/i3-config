@@ -6,7 +6,7 @@
 #### i3 version: 4.13 
 #### Author: Brainfuck
 
-![alt text](http://i.hizliresim.com/g2yzg3.png)
+![alt text](http://i.hizliresim.com/VPa6EP.png)
 
 
 
@@ -39,7 +39,9 @@ $HOME/.config/gtk-3.0
 
 Resources:
 
-GTK3 Theme --> Arc-Grey-Dark: https://github.com/eti0/arc-grey-theme
+GTK3 Theme --> Arc-Dark: https://github.com/horst3180/arc-theme
+
+(apt-get install arc-theme)
 
 Icons Theme --> Faenza-Grey: http://riverraiden.deviantart.com/art/Faenza-Grey-264713552
 
