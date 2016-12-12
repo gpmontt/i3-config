@@ -2,11 +2,11 @@
 
 ### i3wm configuration for Kali Linux Xfce 
 
-#### Config Version: 3.12
+#### Config Version: 3.12-dev
 #### i3 version: 4.13 
 #### Author: Brainfuck
 
-![alt text](http://i.hizliresim.com/VPa6EP.png)
+![alt text](http://i.hizliresim.com/5L72gA.png)
 
 
 
