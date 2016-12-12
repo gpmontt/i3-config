@@ -6,7 +6,7 @@
 # Configuration file for i3wm     
 #                            
 # i3 version: 4.13 
-# Config version: 3.12.1               
+# Config version: 3.12.2               
 # Dependencies: scrot, feh                                  
 # Author: Brainfuck 
 # https://github.com/BrainfuckSec/i3-config
@@ -225,7 +225,7 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
         tray_padding 0
     
 		colors {
-			background #33393B
+			background #383c4a
 			statusline #eaeaea
 			separator  #081419
 			#	               border  backgr  text
