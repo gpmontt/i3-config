@@ -28,6 +28,7 @@ Download --> http://fontawesome.io/
 mkdir -v ~/.local/share/fonts
 cp fontawesome-webfont.ttf ~/.local/share/fonts
 fc-cache -fv
+```
 
 
 ##### Simply run this commands:
@@ -37,6 +38,7 @@ cp -R i3 ~/.config
 cp -R gtk-3.0 ~/.config
 mv gtkrc-2.0 .gtkrc2-0 
 cp .gtkrc-2.0 $HOME
+```
 
 
 ##### GTK Theme & Icons:
