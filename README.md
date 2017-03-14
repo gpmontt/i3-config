@@ -2,7 +2,7 @@
 
 ### i3wm configuration for Kali Linux Xfce 
 
-#### Config Version: 3.13
+#### Config Version: 3.14
 #### i3 version: 4.13 
 #### Author: Brainfuck
 
@@ -14,12 +14,13 @@
 ##### Install i3 with dependencies:
 ```bash
 sudo apt-get update && sudo apt-get dist-upgrade -y
-sudo apt-get install -y i3 i3blocks scrot feh xfonts-terminus ttf-liberation
+sudo apt-get install -y i3 i3blocks rofi scrot feh xfonts-terminus ttf-liberation
 ```
 
 
 
 #### CONFIGURATION
+
 
 ##### FontAwesome for i3-bar:
 Download --> http://fontawesome.io/
@@ -34,10 +35,10 @@ fc-cache -fv
 ##### Simply run this commands:
 ```bash
 cd i3-config/
-cp -R i3 ~/.config 
+cp -R i3 ~/.config
+cp -R rofi/config ~/,config
 cp -R gtk-3.0 ~/.config
-mv gtkrc-2.0 .gtkrc2-0 
-cp .gtkrc-2.0 $HOME
+cp gtkrc-2.0 ~/.gtkrc2-0 
 ```
 
 
@@ -46,6 +47,11 @@ cp .gtkrc-2.0 $HOME
 GTK3 Theme --> Arc-Dark: https://github.com/horst3180/arc-theme
 
 Icons Theme --> Arc-Icon-Theme: https://github.com/horst3180/arc-icon-theme
+
+
+##### Rofi Theme:
+
+Arc-Dark --> https://github.com/leofa/rofi-themes
 
 
 
