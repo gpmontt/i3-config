@@ -56,10 +56,12 @@ Arc-Dark --> https://github.com/leofa/rofi-themes
 
 
 
+**Kali Linux - i3wm**
+![alt text](http://i.hizliresim.com/1LMlDG.png)
+
+
+
+
 **Kali Linux - Xfce**
 
-![alt text](http://i.hizliresim.com/g2YvXR.png)
-
-
-**Kali Linux - i3wm**
-![alt text](http://i.hizliresim.com/Qvz8vk.png)
+![alt text](http://i.hizliresim.com/kbnyvv.png)
