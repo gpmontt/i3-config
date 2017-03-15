@@ -32,7 +32,7 @@ fc-cache -fv
 ```
 
 
-##### Simply run this commands the reboot:
+##### Simply run this commands for i3 configuration then reboot:
 ```bash
 cd i3-config/
 cp -R i3 ~/.config
