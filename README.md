@@ -32,11 +32,11 @@ fc-cache -fv
 ```
 
 
-##### Simply run this commands:
+##### Simply run this commands the reboot:
 ```bash
 cd i3-config/
 cp -R i3 ~/.config
-cp -R rofi/config ~/,config
+cp -R rofi/config ~/.config
 cp -R gtk-3.0 ~/.config
 cp gtkrc-2.0 ~/.gtkrc2-0 
 ```
@@ -56,12 +56,10 @@ Arc-Dark --> https://github.com/leofa/rofi-themes
 
 
 
-**Kali Linux - i3wm**
-![alt text](http://i.hizliresim.com/1LMlDG.png)
-
-
-
-
 **Kali Linux - Xfce**
 
-![alt text](http://i.hizliresim.com/kbnyvv.png)
+![alt text](http://i.hizliresim.com/g2YvXR.png)
+
+
+**Kali Linux - i3wm**
+![alt text](http://i.hizliresim.com/Qvz8vk.png)
