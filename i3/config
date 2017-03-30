@@ -7,8 +7,8 @@
 # This configuration file is optimized for Kali Linux OS with Xfce     
 #                            
 # i3 version: 4.13 
-# Config version: 3.14               
-# Dependencies: i3blocks, scrot, feh, rofi                                  
+# Config version: 3.20               
+# Dependencies: i3blocks, scrot, feh, rofi, compton                                  
 # Author: Brainfuck 
 # https://github.com/BrainfuckSec/i3-config
 # 
@@ -17,8 +17,8 @@
 
 ## Colors
 # class                  border  backgr  text     indicator child_border 
-client.focused		     #a8acbd #a8acbd #d3dae3  #a8acbd   #a8acbd
-client.focused_inactive  #404552 #404552 #d3dae3  #404552   #404552
+client.focused		     #585e74 #585e74 #d3dae3  #585e74   #585e74
+client.focused_inactive  #383c4a #383c4a #d3dae3  #383c4a   #383c4a
 client.unfocused         #353945 #353945 #7c818c  #353945   #353945	
 client.urgent            #5294e2 #5294e2 #ffffff  #5294e2   #5294e2
 
@@ -33,8 +33,6 @@ new_window pixel 1
 workspace_auto_back_and_forth yes
 
 # Use Mouse+Ctrl to drag floating windows to their wanted position
-# by default i3 use $mod for this
-#floating_modifier $mod
 floating_modifier Ctrl
 
 # resize window (you can also use the mouse for that)
@@ -139,16 +137,16 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 ## Workspaces
 # customize workspace name
-set $ws1   [I]
-set $ws2   [II]
-set $ws3   [III]
-set $ws4   [IV]
-set $ws5   [V]
-set $ws6   [VI]
-set $ws7   [VII]
-set $ws8   [VIII]
-set $ws9   [IX]
-set $ws0   [X]
+set $ws1   I
+set $ws2   II
+set $ws3   III
+set $ws4   IV
+set $ws5   V
+set $ws6   VI
+set $ws7   VII
+set $ws8   VIII
+set $ws9   IX
+set $ws0   X
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -184,8 +182,9 @@ assign [class="Mousepad"]       $ws4
 #assign [class="Vlc"]			$ws7
 
 
-# enable floating mode for all xfce4-terminal windows
+# enable floating mode for selected windows
 #for_window [class="Xfce4-terminal"] floating enable border pixel 1
+for_window [class="Thunar"] floating enable border pixel 1
 
 
 ## My Keybindings
@@ -225,6 +224,9 @@ colors {
 
  
 ## Start Up commands and applications
+# compton
+exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
+
 # network-manager applet
 exec --no-startup-id nm-applet
 
