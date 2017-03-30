@@ -2,7 +2,7 @@
 
 ### i3wm configuration for Kali Linux Xfce 
 
-#### Config Version: 3.14
+#### Config Version: 3.20
 #### i3 version: 4.13 
 #### Author: Brainfuck
 
@@ -14,7 +14,7 @@
 ##### Install i3 with dependencies:
 ```bash
 sudo apt-get update && sudo apt-get dist-upgrade -y
-sudo apt-get install -y i3 i3blocks rofi scrot feh xfonts-terminus ttf-liberation
+sudo apt-get install -y i3 i3blocks rofi scrot feh compton xfonts-terminus ttf-liberation
 ```
 
 
@@ -36,8 +36,9 @@ fc-cache -fv
 ```bash
 cd i3-config/
 cp -R i3 ~/.config
-cp -R rofi/config ~/.config
+cp -R rofi ~/.config
 cp -R gtk-3.0 ~/.config
+cp compton.conf ~/.config
 cp gtkrc-2.0 ~/.gtkrc2-0 
 ```
 
@@ -57,9 +58,9 @@ Arc-Dark --> https://github.com/leofa/rofi-themes
 
 
 **Kali Linux - i3wm**
-![alt text](http://i.hizliresim.com/W01MqN.png)
+![alt text](http://i.hizliresim.com/4PGkyp.png)
 
 
 **Kali Linux - Xfce**
 
-![alt text](http://i.hizliresim.com/2r8XON.png)
+![alt text](http://i.hizliresim.com/p0GoJJ.png)
