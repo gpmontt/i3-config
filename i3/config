@@ -1,25 +1,25 @@
-##################################################################
+##########################################################################
 #
 # i3-config
 # #########
 #
-# Configuration file for i3wm 
-# This configuration file is optimized for Kali Linux OS with Xfce     
-#                            
-# i3 version: 4.13 
-# Config version: 3.20               
-# Dependencies: i3blocks, scrot, feh, rofi, compton                                  
-# Author: Brainfuck 
-# https://github.com/BrainfuckSec/i3-config
-# 
-##################################################################  
+# Configuration file for i3wm
+# This configuration file is optimized for Kali Linux OS with Xfce
+#
+# i3 version: 4.13
+# Config version: 3.30
+# Dependencies: i3blocks, scrot, feh, rofi, compton, ranger, lxappereance
+# Author: Brainfuck
+# https://github.com/brainfucksec/i3-config
+#
+#########################################################################
 
 
 ## Colors
-# class                  border  backgr  text     indicator child_border 
+# class                  border  backgr  text     indicator child_border
 client.focused		     #585e74 #585e74 #d3dae3  #585e74   #585e74
 client.focused_inactive  #383c4a #383c4a #d3dae3  #383c4a   #383c4a
-client.unfocused         #353945 #353945 #7c818c  #353945   #353945	
+client.unfocused         #353945 #353945 #7c818c  #353945   #353945
 client.urgent            #5294e2 #5294e2 #ffffff  #5294e2   #5294e2
 
 
@@ -63,7 +63,7 @@ bindsym $mod+z mode "resize"
 
 
 ## Keybindings
-# Mod4 = Super Key  
+# Mod4 = Super Key
 set $mod Mod4
 
 # start a terminal (xfce4-terminal)
@@ -73,7 +73,7 @@ bindsym $mod+Return exec --no-startup-id xfce4-terminal
 bindsym $mod+Shift+P kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -font "terminus 12" 
+bindsym $mod+d exec rofi -show run -font "terminus 12"
 
 # change focus
 bindsym $mod+j focus left
@@ -174,8 +174,8 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 
 ## workspaces assignment
 # force a window on a named workspace
-assign [class="Xfce4-terminal"]	$ws1
-assign [class="Thunar"]         $ws1
+#assign [class="Xfce4-terminal"]	$ws1
+#assign [class="Thunar"]         $ws1
 assign [class="Firefox"]	    $ws2
 assign [class="Mousepad"]       $ws4
 #assign [class="VirtualBox"]    $ws6
@@ -186,20 +186,20 @@ assign [class="Mousepad"]       $ws4
 #for_window [class="Xfce4-terminal"] floating enable border pixel 1
 for_window [class="Thunar"] floating enable border pixel 1
 
-
 ## My Keybindings
 # applications
 # --no-startup-id = i don't need startup notifications
 # https://faq.i3wm.org/question/561/what-is-that-thing-called-no-startup-id
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e vim
-bindsym $mod+F3 exec --no-startup-id vlc
-bindsym $mod+F4 exec --no-startup-id cherrytree
-bindsym $mod+F5 exec --no-startup-id virtualbox
+bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e ranger
+bindsym $mod+F3 exec --no-startup-id xfce4-terminal -e vim
+bindsym $mod+F4 exec --no-startup-id vlc
+bindsym $mod+F5 exec --no-startup-id cherrytree
+bindsym $mod+F6 exec --no-startup-id virtualbox
 bindsym $mod+t exec --no-startup-id thunar $PWD
 
 # screenshots (with scrot)
-bindsym Print exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/media/images/screenshots/' 
+bindsym Print exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/media/images/screenshots/'
 
 # screenlock
 bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
@@ -207,7 +207,7 @@ bindsym $mod+Ctrl+l exec ~/.config/i3/lock.sh
 
 ## i3bar with i3blocks
 bar {
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf 
+		status_command i3blocks -c ~/.config/i3/i3blocks.conf
         position top
         font pango: Terminus, awesome 9
 
@@ -222,7 +222,7 @@ colors {
 	   }
 }
 
- 
+
 ## Start Up commands and applications
 # compton
 exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
@@ -231,4 +231,4 @@ exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 exec --no-startup-id nm-applet
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/Girl-Wearing-Gas-Mask-2.jpg
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/a_black_white_1920x1080.png
