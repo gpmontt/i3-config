@@ -1,9 +1,9 @@
 ## i3 config
 
-### i3wm configuration for Kali Linux Xfce 
+### i3wm configuration for Kali Linux Xfce
 
-#### Config Version: 3.30
-#### i3 version: 4.13 
+#### Config Version: 3.31
+#### i3 version: 4.13
 #### Author: Brainfuck
 
 
@@ -32,7 +32,7 @@ cp compton.conf ~/.config
 
 ##### Ranger File Manager:
 
-After startup, ranger creates a directory ~/.config/ranger. To copy the default configuration to this directory issue the following command: 
+After startup, ranger creates a directory ~/.config/ranger. To copy the default configuration to this directory issue the following command:
 
 ```bash
 ranger --copy-config=all
