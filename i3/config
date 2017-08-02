@@ -4,11 +4,11 @@
 # #########
 #
 # Configuration file for i3wm
-# This configuration file is optimized for Kali Linux OS with Xfce
+# This configuration file is optimized for Kali Linux OS
 #
 # i3 version: 4.13
-# Config version: 3.30
-# Dependencies: i3blocks, scrot, feh, rofi, compton, ranger, lxappereance
+# Config version: 3.31
+# Dependencies: i3blocks, scrot, feh, rofi, compton, ranger, lxappearance
 # Author: Brainfuck
 # https://github.com/brainfucksec/i3-config
 #
@@ -27,7 +27,7 @@ client.urgent            #5294e2 #5294e2 #ffffff  #5294e2   #5294e2
 # font for window titles. ISO 10646 = Unicode
 font xft:Terminus 9
 
-new_window pixel 1
+new_window pixel 2
 
 # Back and forth workplace switching
 workspace_auto_back_and_forth yes
@@ -175,28 +175,24 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 ## workspaces assignment
 # force a window on a named workspace
 #assign [class="Xfce4-terminal"]	$ws1
-#assign [class="Thunar"]         $ws1
 assign [class="Firefox"]	    $ws2
-assign [class="Mousepad"]       $ws4
-#assign [class="VirtualBox"]    $ws6
-#assign [class="Vlc"]			$ws7
-
+#assign [class="VirtualBox"]    $ws4
+#assign [class="Vlc"]			$ws5
 
 # enable floating mode for selected windows
-#for_window [class="Xfce4-terminal"] floating enable border pixel 1
-for_window [class="Thunar"] floating enable border pixel 1
+#for_window [class="Xfce4-terminal"] floating enable border pixel 2
+for_window [class="Thunar"] floating enable border pixel 2
 
 ## My Keybindings
 # applications
 # --no-startup-id = i don't need startup notifications
 # https://faq.i3wm.org/question/561/what-is-that-thing-called-no-startup-id
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e ranger
-bindsym $mod+F3 exec --no-startup-id xfce4-terminal -e vim
-bindsym $mod+F4 exec --no-startup-id vlc
-bindsym $mod+F5 exec --no-startup-id cherrytree
-bindsym $mod+F6 exec --no-startup-id virtualbox
-bindsym $mod+t exec --no-startup-id thunar $PWD
+bindsym $mod+F2 exec --no-startup-id xfce4-terminal -e vim
+bindsym $mod+F3 exec --no-startup-id vlc
+bindsym $mod+F4 exec --no-startup-id xfce4-terminal -e terminal_velocity
+bindsym $mod+F5 exec --no-startup-id virtualbox
+bindsym $mod+o exec --no-startup-id xfce4-terminal -e ranger
 
 # screenshots (with scrot)
 bindsym Print exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/media/images/screenshots/'
@@ -212,7 +208,7 @@ bar {
         font pango: Terminus, awesome 9
 
 colors {
-			background #383c4a
+	   		background #383c4a
 			statusline #d3dae3
 			separator  #8396af
 			#	               border  backgr  text
@@ -231,4 +227,4 @@ exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 exec --no-startup-id nm-applet
 
 # wallpaper
-exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/a_black_white_1920x1080.png
+exec --no-startup-id feh --bg-fill ~/media/images/wallpapers/space-1920x1080.jpg
